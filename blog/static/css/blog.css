@@ -1,0 +1,43 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  font-size: 1em;
+}
+
+#main {
+  display: flex;
+  justify-content: space-between;
+}
+
+#content {
+  padding-right: 20px;
+  padding-left: 10px;
+  width: 75%;
+}
+
+#sidebar {
+  background-color: rgb(240, 240, 240);
+  padding-top: 20px;
+  padding-left: 10px;
+  height: fit-content;
+  width: 25%;
+}
+
+h1 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(204, 204, 204);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(4, 166, 255);
+}
+
+.date {
+  font-style: oblique;
+  color: rgb(150, 150, 150);
+}
+
+.date + p {
+  font-weight: 600;
+}
