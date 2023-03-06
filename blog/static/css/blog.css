@@ -41,3 +41,37 @@ a {
 .date + p {
   font-weight: 600;
 }
+
+#main #content form label {
+  display: block;
+  font-weight: 600;
+}
+
+#main #content form > p > input,
+textarea {
+  background-color: rgb(240, 240, 240);
+  border: 0;
+}
+
+#main #content form > p > input {
+  height: 25px;
+  margin-top: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+#main #content form > input[type="submit"] {
+  background-color: RGB(1, 149, 255);
+  color: white;
+  border: 0;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+#main #content form > ul.errorlist {
+  padding-left: 5px;
+  color: RGB(187, 0, 20);
+  font-weight: 600;
+}
