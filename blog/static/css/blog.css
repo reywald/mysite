@@ -47,22 +47,25 @@ a {
   font-weight: 600;
 }
 
-#main #content form > p > input,
-textarea {
+#id_name,
+#id_email,
+#id_body {
   background-color: rgb(240, 240, 240);
   border: 0;
 }
 
-#main #content form > p > input {
+#id_name,
+#id_email {
   height: 25px;
   margin-top: 4px;
 }
 
-textarea {
+#id_body {
   height: 100px;
+  margin-top: 4px;
 }
 
-#main #content form > input[type="submit"] {
+#main #content form input[type="submit"] {
   background-color: RGB(1, 149, 255);
   color: white;
   border: 0;
@@ -70,8 +73,17 @@ textarea {
   text-transform: uppercase;
 }
 
-#main #content form > ul.errorlist {
+ul.errorlist {
   padding-left: 5px;
   color: RGB(187, 0, 20);
   font-weight: 600;
+}
+
+.comment:nth-child(even) {
+  background-color: rgb(240, 240, 240);
+  padding: 10px;
+}
+
+.info {
+  font-size: 0.8em;
 }
