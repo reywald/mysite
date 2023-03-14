@@ -38,6 +38,7 @@ a {
   color: rgb(150, 150, 150);
 }
 
+.tags,
 .date + p {
   font-weight: 600;
 }
