@@ -50,13 +50,15 @@ a {
 
 #id_name,
 #id_email,
-#id_body {
+#id_body,
+#id_query {
   background-color: rgb(240, 240, 240);
   border: 0;
 }
 
 #id_name,
-#id_email {
+#id_email,
+#id_query {
   height: 25px;
   margin-top: 4px;
 }

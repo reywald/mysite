@@ -8,6 +8,8 @@ django = "*"
 autopep8 = "*"
 django-taggit = "*"
 markdown = "*"
+psycopg2-binary = "*"
+djlint = "*"
 
 [dev-packages]
 
