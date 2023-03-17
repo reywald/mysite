@@ -1,14 +1,13 @@
-from re import search
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic import ListView
 from django.views.decorators.http import require_POST
 from django.core.mail import send_mail
 from django.db.models import Count
-from django.contrib.postgres.search import SearchVector
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 
 
-from .models import Post, Comment
+from .models import Post
 from .forms import EmailPostForm, CommentForm, SearchForm
 from taggit.models import Tag
 
@@ -128,7 +127,11 @@ def post_search(request):
 
         if form.is_valid():
             query = form.cleaned_data['query']
+            search_vector = SearchVector("title", "body")
+            search_query = SearchQuery(query)
             results = Post.published.annotate(
-                search=SearchVector("title", "body")).filter(search=query)
+                search=search_vector, 
+                rank=SearchRank(search_vector, search_query)
+                ).filter(search=search_query).order_by("-rank")
 
     return render(request, "blog/post/search.xhtml", {"form": form, "query": query, "results": results})
